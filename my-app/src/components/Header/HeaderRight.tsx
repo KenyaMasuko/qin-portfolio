@@ -9,7 +9,7 @@ export const HeaderRight = () => {
   return (
     <div>
       <nav
-        className={`absolute md:relative top-0 transition-opacity bg-pink-500 md:bg-white h-screen md:h-auto w-screen md:w-auto md:pt-0 ${
+        className={`absolute md:relative top-0 transition-opacity bg-pink-500 md:bg-transparent h-screen md:h-auto w-screen md:w-auto md:pt-0 ${
           opened
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto"
