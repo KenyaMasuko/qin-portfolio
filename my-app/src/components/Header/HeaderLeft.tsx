@@ -4,6 +4,8 @@ import {
   HeaderOpenContext,
   HeaderOpenToggleContext,
 } from "../../context/Header"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMoon } from "@fortawesome/free-solid-svg-icons"
 
 export const HeaderLeft = () => {
   const opened = useContext(HeaderOpenContext)
@@ -31,13 +33,13 @@ export const HeaderLeft = () => {
           Shimabu IT University
         </h1>
         <button
-          className={`md:hidden ${
+          className={`bg-transparent border-solid border-gray-300 rounded-lg py-1 ${
             opened
               ? "opacity-0 pointer-events-none"
               : "opacity-100 pointer-events-auto"
           }`}
         >
-          icon
+          <FontAwesomeIcon icon={["far", "moon"]} />
         </button>
       </div>
     </div>

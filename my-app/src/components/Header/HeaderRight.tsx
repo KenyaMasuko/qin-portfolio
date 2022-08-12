@@ -1,10 +1,11 @@
+import { faMoon } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Link from "next/link"
 import React, { useContext } from "react"
 import { HeaderOpenContext } from "../../context/Header"
 
 export const HeaderRight = () => {
   const opened = useContext(HeaderOpenContext)
-  console.log(opened)
 
   return (
     <div>
@@ -43,6 +44,17 @@ export const HeaderRight = () => {
                 Contact
               </a>
             </Link>
+          </li>
+          <li>
+            <button
+              className={`bg-transparent border-solid border-gray-300 rounded-lg py-1 ${
+                opened
+                  ? "opacity-0 pointer-events-none"
+                  : "opacity-100 pointer-events-auto"
+              }`}
+            >
+              <FontAwesomeIcon icon={["far", "moon"]} />
+            </button>
           </li>
         </ul>
       </nav>
