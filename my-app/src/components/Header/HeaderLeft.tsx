@@ -5,7 +5,7 @@ import {
   HeaderOpenToggleContext,
 } from "../../context/Header"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faMoon } from "@fortawesome/free-solid-svg-icons"
+import Link from "next/link"
 
 export const HeaderLeft = () => {
   const opened = useContext(HeaderOpenContext)
@@ -23,17 +23,21 @@ export const HeaderLeft = () => {
           title={title}
           className="md:hidden"
         />
-        <h1
-          className={`text-lg m-0 ${
-            opened
-              ? "opacity-0 pointer-events-none"
-              : "opacity-100 pointer-events-auto"
-          }`}
-        >
-          Shimabu IT University
-        </h1>
+        <Link href="/">
+          <a className="text-black no-underline hover:opacity-50">
+            <h1
+              className={`text-lg m-0 ${
+                opened
+                  ? "opacity-0 pointer-events-none"
+                  : "opacity-100 pointer-events-auto"
+              }`}
+            >
+              Shimabu IT University
+            </h1>
+          </a>
+        </Link>
         <button
-          className={`bg-transparent border-solid border-gray-300 rounded-lg py-1 ${
+          className={`bg-transparent border-solid border-gray-300 rounded-lg py-1 md:hidden ${
             opened
               ? "opacity-0 pointer-events-none"
               : "opacity-100 pointer-events-auto"

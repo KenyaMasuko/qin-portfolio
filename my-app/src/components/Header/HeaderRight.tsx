@@ -4,6 +4,25 @@ import Link from "next/link"
 import React, { useContext } from "react"
 import { HeaderOpenContext } from "../../context/Header"
 
+const navItems = [
+  {
+    href: "/about",
+    label: "About",
+  },
+  {
+    href: "/blog",
+    label: "Blog",
+  },
+  {
+    href: "/portfolio",
+    label: "Portfolio",
+  },
+  {
+    href: "/contact",
+    label: "Contact",
+  },
+] as const
+
 export const HeaderRight = () => {
   const opened = useContext(HeaderOpenContext)
 
@@ -17,34 +36,15 @@ export const HeaderRight = () => {
         }`}
       >
         <ul className="pt-36 md:p-0 text-2xl md:text-lg list-none font-bold m-0 pl-0 w-11/12 md:w-auto mx-auto space-y-3 md:space-y-0 md:flex md:space-x-6">
-          <li>
-            <Link href="#">
-              <a className="text-white md:text-black no-underline hover:opacity-50 transition-opacity">
-                About
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              <a className="text-white md:text-black no-underline  hover:opacity-50 transition-opacity">
-                Blog
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              <a className="text-white md:text-black no-underline  hover:opacity-50 transition-opacity">
-                Portfolio
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              <a className="text-white md:text-black no-underline hover:opacity-50 transition-opacity">
-                Contact
-              </a>
-            </Link>
-          </li>
+          {navItems.map((item) => (
+            <li key={item.label}>
+              <Link href={item.href}>
+                <a className="text-white md:text-black no-underline hover:opacity-50 transition-opacity">
+                  {item.label}
+                </a>
+              </Link>
+            </li>
+          ))}
           <li>
             <button
               className={`bg-transparent border-solid border-gray-300 rounded-lg py-1 ${

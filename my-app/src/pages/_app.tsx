@@ -16,7 +16,16 @@ library.add(far, faMoon, faStar)
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <MantineProvider>
+    <MantineProvider
+      theme={{
+        fontFamily:
+          '"游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif',
+        fontFamilyMonospace: "Avenir Next, sans-serif",
+        headings: {
+          fontFamily: "Avenir Next, sans-serif",
+        },
+      }}
+    >
       <Header />
       <main className="pt-28">
         <Component {...pageProps} />

@@ -1,5 +1,6 @@
+import { Image } from "@mantine/core"
 import React from "react"
-import { Button } from "../Button"
+import { Button } from "../Element/Button"
 import { Title } from "../Title"
 
 export const PortfolioTop = () => {
@@ -9,10 +10,12 @@ export const PortfolioTop = () => {
         <Title title="Portfolio" />
         <div className="space-y-6">
           <article>
-            <div className="bg-blue-600">画像を入れる</div>
+            <div className="bg-blue-600">
+              <Image src="/assets/itkingdom.png" />
+            </div>
             <div className="space-y-6">
               <article className="space-y-4">
-                <h2 className="text-xl my-0">IT KINGDOM</h2>
+                <h2 className="text-xl my-2">IT KINGDOM</h2>
                 <p className="text-base my-0">
                   当サロンのLPページ。React、Next.js、TypeScriptなどのモダンな技術を用いて作られています。初心者にちょうど良い難易度の制作物です。
                 </p>
@@ -26,7 +29,7 @@ export const PortfolioTop = () => {
             </div>
           </article>
         </div>
-        <Button link="#" />
+        <Button link="/portfolio" />
       </div>
     </section>
   )
