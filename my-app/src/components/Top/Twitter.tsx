@@ -2,7 +2,7 @@ import { Image } from "@mantine/core"
 import Link from "next/link"
 import React from "react"
 import { Button } from "../Element/Button"
-import { Title } from "../Title"
+import { Title } from "../Element/Title"
 
 export const Twitter = () => {
   return (

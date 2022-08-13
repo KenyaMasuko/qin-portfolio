@@ -10,7 +10,7 @@ type ButtonProps = {
 export const Button: FC<ButtonProps> = ({ children = "View All", link }) => {
   return (
     <Link href={link} passHref>
-      <Group position="center">
+      <Group className="pt-12" position="center">
         <MantineButton component="a" color="dark" radius="xl">
           {children}
         </MantineButton>

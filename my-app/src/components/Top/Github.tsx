@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Progress } from "@mantine/core"
 import React from "react"
 import { Button } from "../Element/Button"
-import { Title } from "../Title"
+import { Title } from "../Element/Title"
 
 export const GithubTop = () => {
   return (
