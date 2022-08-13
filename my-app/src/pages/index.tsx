@@ -1,6 +1,6 @@
 import type { NextPage } from "next"
 import { MetaHead } from "../components/Element/Head"
-import { AppTop } from "../components/Top"
+import { AppTop } from "../components/Layout/Top"
 
 const Home: NextPage = () => {
   return (
