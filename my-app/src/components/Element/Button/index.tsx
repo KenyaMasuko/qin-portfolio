@@ -1,23 +1,34 @@
-import { Button as MantineButton, Group } from "@mantine/core"
-import Link from "next/link"
-import { FC, ReactNode } from "react"
+import {
+  Button as MantineButton,
+  ButtonProps,
+  useMantineColorScheme,
+} from "@mantine/core"
+import { FC } from "react"
 
-type ButtonProps = {
-  link: string
-  children?: ReactNode
-}
+export const Button: FC<ButtonProps> = ({
+  children = "View All",
+  type = "button",
+}) => {
+  const { colorScheme } = useMantineColorScheme()
+  const dark = colorScheme === "dark"
 
-export const Button: FC<ButtonProps> = ({ children = "View All", link }) => {
   return (
-    <Link href={link} passHref>
-      <MantineButton
-        component="a"
-        color="dark"
-        radius="xl"
-        className="hover:opacity-50"
-      >
-        {children}
-      </MantineButton>
-    </Link>
+    <MantineButton
+      type={type}
+      color="dark"
+      radius="xl"
+      className="hover:opacity-50"
+      sx={{
+        backgroundColor: dark ? "white" : "black",
+        color: dark ? "black" : "white",
+        fontFamily: "Avenir Next, sans-serif",
+        ":hover": {
+          opacity: 0.5,
+          backgroundColor: dark ? "white" : "black",
+        },
+      }}
+    >
+      {children}
+    </MantineButton>
   )
 }
