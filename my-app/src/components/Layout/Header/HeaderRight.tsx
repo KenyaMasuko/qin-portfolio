@@ -42,7 +42,7 @@ export const HeaderRight = () => {
             : "opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto"
         }`}
       >
-        <ul className="pt-36 md:p-0 text-2xl md:text-lg list-none font-bold m-0 pl-0 w-11/12 md:w-auto mx-auto space-y-3 md:space-y-0 md:flex md:space-x-6">
+        <ul className="items-center pt-36 md:p-0 text-2xl md:text-lg list-none font-bold m-0 pl-0 w-11/12 md:w-auto mx-auto space-y-3 md:space-y-0 md:flex md:space-x-6">
           {navItems.map((item) => (
             <li key={item.label}>
               <Link href={item.href} passHref>
@@ -51,7 +51,10 @@ export const HeaderRight = () => {
                   component="a"
                   sx={{
                     fontFamily: "Avenir Next, sans-serif",
-                    color: dark ? "white" : "black",
+                    color: "white",
+                    "@media (min-width: 768px)": {
+                      color: "black",
+                    },
                     root: {
                       "&:hover": {
                         backgroundColor: "white",

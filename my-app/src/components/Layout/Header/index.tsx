@@ -1,21 +1,21 @@
-import { Container } from "@mantine/core"
+import { Container, Header as MantineHeader } from "@mantine/core"
+import { FC } from "react"
 import { HeaderOpenProvider } from "../../../context/Header"
 import { HeaderLeft } from "./HeaderLeft"
 import { HeaderRight } from "./HeaderRight"
 
-export const Header = () => {
+export const Header: FC<{ height: number }> = ({ height }) => {
   return (
     <HeaderOpenProvider>
-      <header className="w-screen fixed z-50">
+      <MantineHeader height={height} className="w-screen">
         <Container
           size="lg"
-          px={0}
-          className="md:flex md:items-center md:py-5 md:justify-between"
+          className="h-full md:flex md:items-center md:py-5 md:justify-between"
         >
           <HeaderLeft />
           <HeaderRight />
         </Container>
-      </header>
+      </MantineHeader>
     </HeaderOpenProvider>
   )
 }

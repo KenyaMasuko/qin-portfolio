@@ -1,8 +1,4 @@
-import {
-  Button as MantineButton,
-  Group,
-  useMantineColorScheme,
-} from "@mantine/core"
+import { Button as MantineButton } from "@mantine/core"
 import Link from "next/link"
 import { FC, ReactNode } from "react"
 
@@ -15,23 +11,23 @@ export const LinkButton: FC<ButtonProps> = ({
   children = "View All",
   link,
 }) => {
-  const { colorScheme } = useMantineColorScheme()
-  const dark = colorScheme === "dark"
-
   return (
     <Link href={link} passHref>
       <MantineButton
         component="a"
         radius="xl"
-        sx={{
-          backgroundColor: dark ? "white" : "black",
-          color: dark ? "black" : "white",
+        sx={(theme) => ({
+          backgroundColor:
+            theme.colorScheme === "dark" ? theme.white : theme.colors.dark[7],
+          color:
+            theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
           fontFamily: "Avenir Next, sans-serif",
-          ":hover": {
+          "&:hover": {
             opacity: 0.5,
-            backgroundColor: dark ? "white" : "black",
+            backgroundColor:
+              theme.colorScheme === "dark" ? theme.white : theme.colors.dark[7],
           },
-        }}
+        })}
       >
         {children}
       </MantineButton>

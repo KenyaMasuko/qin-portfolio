@@ -18,8 +18,8 @@ export const HeaderLeft = () => {
   const title = opened ? "Close navigation" : "Open navigation"
 
   return (
-    <Container size="lg" className="relative z-40 pt-16 md:p-0 pb-5 md:m-0">
-      <div className="flex justify-between items-center">
+    <Container size="lg" px={0} className="h-full relative z-40 md:p-0 md:m-0">
+      <div className="h-full flex justify-between items-center">
         <Burger
           opened={opened}
           color={`${opened ? "#fff" : ""}`}
@@ -28,15 +28,14 @@ export const HeaderLeft = () => {
           className="md:hidden"
         />
         <Link href="/">
-          <a className="no-underline hover:opacity-50">
-            <Title
-              className={`text-lg m-0 ${
-                opened
-                  ? "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"
-                  : "opacity-100  pointer-events-auto"
-              }`}
-              order={1}
-            >
+          <a
+            className={`no-underline hover:opacity-50 ${
+              opened
+                ? "opacity-0 pointer-events-none md:opacity-100 md:pointer-events-auto"
+                : "opacity-100  pointer-events-auto"
+            }`}
+          >
+            <Title className="text-lg m-0" order={1}>
               Shimabu IT University
             </Title>
           </a>
@@ -47,7 +46,6 @@ export const HeaderLeft = () => {
               ? "opacity-0 pointer-events-none"
               : "opacity-100 pointer-events-auto"
           }`}
-          color={dark ? "yellow" : "blue"}
           onClick={() => toggleColorScheme()}
         >
           {dark ? (
