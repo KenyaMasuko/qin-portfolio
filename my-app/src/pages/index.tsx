@@ -1,6 +1,7 @@
 import type { NextPage } from "next"
 import { MetaHead } from "../components/Element/Head"
-import { AppTop } from "../components/Layout/Top"
+import { AppMain } from "../components/Layout/Main"
+import { Main } from "../components/Layout/Top"
 
 const Home: NextPage = () => {
   return (
@@ -9,7 +10,9 @@ const Home: NextPage = () => {
         title="Shinmabu It University"
         description="しまぶーのポートフォリオのためのページです"
       />
-      <AppTop />
+      <AppMain>
+        <Main />
+      </AppMain>
     </>
   )
 }

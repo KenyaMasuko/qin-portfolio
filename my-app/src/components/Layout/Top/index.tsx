@@ -6,7 +6,7 @@ import { GithubTop } from "./Github"
 import { PortfolioTop } from "./Portfolio"
 import { Twitter } from "./Twitter"
 
-export const AppTop = () => {
+export const Main = () => {
   return (
     <Box className="space-y-5">
       <FirstView />

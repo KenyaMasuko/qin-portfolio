@@ -72,13 +72,10 @@ function MyApp({ Component, pageProps }: AppProps) {
           },
           colorScheme,
         }}
+        withNormalizeCSS
       >
         <MyGlobalStyles />
-        <Header />
-        <main className="pt-28 md:pt-16">
-          <Component {...pageProps} />
-        </main>
-        <Footer />
+        <Component {...pageProps} />
       </MantineProvider>
     </ColorSchemeProvider>
   )

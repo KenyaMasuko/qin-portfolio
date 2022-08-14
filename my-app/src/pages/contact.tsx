@@ -1,15 +1,10 @@
-import {
-  Box,
-  Container,
-  Group,
-  Textarea,
-  TextInput,
-  useMantineColorScheme,
-} from "@mantine/core"
+import { Box, Container, Group, Textarea, TextInput } from "@mantine/core"
 import type { NextPage } from "next"
 import { useForm } from "@mantine/form"
 import { HeadingTitle } from "../components/Element/Title"
 import { Button } from "../components/Element/Button"
+import { MetaHead } from "../components/Element/Head"
+import { AppMain } from "../components/Layout/Main"
 
 const Contact: NextPage = () => {
   const form = useForm({
@@ -30,39 +25,44 @@ const Contact: NextPage = () => {
   })
 
   return (
-    <Container size="lg">
-      <HeadingTitle title="Contact" />
-      <Box>
-        <form onSubmit={form.onSubmit((values) => console.log(values))}>
-          <Box className="space-y-6">
-            <TextInput
-              required
-              label="Email"
-              placeholder="your@email.com"
-              {...form.getInputProps("email")}
-            />
+    <>
+      <MetaHead title="Contact" description="コンタクトページ" />
+      <AppMain>
+        <Container size="lg">
+          <HeadingTitle title="Contact" />
+          <Box>
+            <form onSubmit={form.onSubmit((values) => console.log(values))}>
+              <Box className="space-y-6">
+                <TextInput
+                  required
+                  label="Email"
+                  placeholder="your@email.com"
+                  {...form.getInputProps("email")}
+                />
 
-            <TextInput
-              required
-              label="Name"
-              placeholder="Taro Yamada"
-              {...form.getInputProps("name")}
-            />
+                <TextInput
+                  required
+                  label="Name"
+                  placeholder="Taro Yamada"
+                  {...form.getInputProps("name")}
+                />
 
-            <Textarea
-              required
-              label="Your Message"
-              placeholder="your@email.com"
-              {...form.getInputProps("message")}
-            />
+                <Textarea
+                  required
+                  label="Your Message"
+                  placeholder="your@email.com"
+                  {...form.getInputProps("message")}
+                />
 
-            <Group position="center">
-              <Button type="submit">Send message</Button>
-            </Group>
+                <Group position="center">
+                  <Button type="submit">Send message</Button>
+                </Group>
+              </Box>
+            </form>
           </Box>
-        </form>
-      </Box>
-    </Container>
+        </Container>
+      </AppMain>
+    </>
   )
 }
 
