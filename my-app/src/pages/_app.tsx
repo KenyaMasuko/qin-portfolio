@@ -1,4 +1,5 @@
 import "../styles/globals.css"
+import { useState } from "react"
 import type { AppProps } from "next/app"
 import {
   ColorSchemeProvider,
@@ -6,18 +7,11 @@ import {
   ColorScheme,
   Global,
 } from "@mantine/core"
-import { Footer } from "../components/Layout/Footer"
-import { Header } from "../components/Layout/Header"
 
-import { config } from "@fortawesome/fontawesome-svg-core"
-import "@fortawesome/fontawesome-svg-core/styles.css"
-config.autoAddCss = false
-
+//fontAwesome regularを追加
 import { library } from "@fortawesome/fontawesome-svg-core"
-import { far, faSun } from "@fortawesome/free-regular-svg-icons"
-import { faMoon, faStar } from "@fortawesome/free-solid-svg-icons"
-import { useState } from "react"
-library.add(far, faMoon, faStar, faSun)
+import { far } from "@fortawesome/free-regular-svg-icons"
+library.add(far)
 
 const MyGlobalStyles: React.FC = () => (
   <Global
@@ -34,12 +28,6 @@ const MyGlobalStyles: React.FC = () => (
         color:
           theme.colorScheme === "dark" ? theme.white : theme.colors.dark[6],
         lineHeight: theme.lineHeight,
-      },
-      header: {
-        backgroundColor:
-          theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
-        color:
-          theme.colorScheme === "dark" ? theme.white : theme.colors.dark[6],
       },
       a: {
         color: "inherit",

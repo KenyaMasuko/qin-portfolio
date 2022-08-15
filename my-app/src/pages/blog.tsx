@@ -2,11 +2,11 @@ import { Container } from "@mantine/core"
 import type { NextPage } from "next"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { MetaHead } from "../components/Element/Head"
-import { HeadingTitle } from "../components/Element/Title"
-import { InfiniteScroll } from "../components/InfiniteScroll"
-import { AppMain } from "../components/Layout/Main"
-import { MockBlogData } from "../Mock/MockBlogData"
+import { MetaHead } from "src/components/Element/Head"
+import { HeadingTitle } from "src/components/Element/Title"
+import { InfiniteScroll } from "src/components/InfiniteScroll"
+import { AppMain } from "src/components/Layout/Main"
+import { MockBlogData } from "src/Mock/MockBlogData"
 
 const Blog: NextPage = () => {
   const router = useRouter()
@@ -34,8 +34,6 @@ const Blog: NextPage = () => {
                 </Link>
               </article>
             ))}
-            {/* {[...Array(4)].map((_, i) => (
-            ))} */}
           </div>
           <InfiniteScroll
             loadMoreData={async () => await mockBlogData.loadMorePosts()}

@@ -10,7 +10,6 @@ export const Button: FC<ButtonProps> = ({
       type={type}
       color="dark"
       radius="xl"
-      className="hover:opacity-50"
       sx={(theme) => ({
         backgroundColor:
           theme.colorScheme === "dark" ? theme.white : theme.colors.dark[7],

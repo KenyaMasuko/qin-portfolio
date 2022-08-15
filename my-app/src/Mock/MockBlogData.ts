@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from "react"
-import { BlogPost } from "../components/Layout/Top/Blog"
+import { BlogPost } from "src/components/Layout/Top/Blog"
 
 export class MockBlogData {
   readonly blogPosts: BlogPost[]
@@ -13,9 +13,8 @@ export class MockBlogData {
     this.setBlogPosts = setBlogPosts
   }
 
-  // todo setTimeoutの処理について理解する
   /**
-   * postを新しく生成して、既存のpostに追加する(おそらく20までの投稿までしか表示されない)
+   * postを新しく生成して、既存のpostに追加する
    * @return {Boolean} moreDataYet
    */
   async loadMorePosts() {
