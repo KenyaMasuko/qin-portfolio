@@ -3,7 +3,7 @@ import { useContext } from "react"
 import {
   HeaderOpenContext,
   HeaderOpenToggleContext,
-} from "../../../context/Header"
+} from "src/context/HeaderContext"
 
 export const Burger = () => {
   const opened = useContext(HeaderOpenContext)

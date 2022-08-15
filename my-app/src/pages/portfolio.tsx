@@ -1,8 +1,8 @@
 import { Container, Image, SimpleGrid } from "@mantine/core"
 import type { NextPage } from "next"
-import { MetaHead } from "../components/Element/Head"
-import { HeadingTitle } from "../components/Element/Title"
-import { AppMain } from "../components/Layout/Main"
+import { MetaHead } from "src/components/Element/Head"
+import { HeadingTitle } from "src/components/Element/Title"
+import { AppMain } from "src/components/Layout/Main"
 
 const Portfolio: NextPage = () => {
   return (

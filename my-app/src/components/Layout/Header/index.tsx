@@ -1,6 +1,6 @@
 import { Container, Header as MantineHeader } from "@mantine/core"
 import { FC } from "react"
-import { HeaderOpenProvider } from "../../../context/Header"
+import { HeaderOpenProvider } from "src/context/HeaderContext"
 import { HeaderLeft } from "./HeaderLeft"
 import { HeaderRight } from "./HeaderRight"
 

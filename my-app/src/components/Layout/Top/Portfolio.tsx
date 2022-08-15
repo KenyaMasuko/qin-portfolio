@@ -1,7 +1,7 @@
 import { Center, Container, Image, SimpleGrid } from "@mantine/core"
 import React from "react"
-import { LinkButton } from "../../Element/LinkButton"
-import { HeadingTitle } from "../../Element/Title"
+import { LinkButton } from "src/components/Element/LinkButton"
+import { HeadingTitle } from "src/components/Element/Title"
 
 export const PortfolioTop = () => {
   return (

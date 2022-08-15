@@ -1,10 +1,16 @@
-import { Box, Container, Group, Textarea, TextInput } from "@mantine/core"
+import {
+  Box,
+  Button,
+  Container,
+  Group,
+  Textarea,
+  TextInput,
+} from "@mantine/core"
 import type { NextPage } from "next"
 import { useForm } from "@mantine/form"
-import { HeadingTitle } from "../components/Element/Title"
-import { Button } from "../components/Element/Button"
-import { MetaHead } from "../components/Element/Head"
-import { AppMain } from "../components/Layout/Main"
+import { MetaHead } from "src/components/Element/Head"
+import { AppMain } from "src/components/Layout/Main"
+import { HeadingTitle } from "src/components/Element/Title"
 
 const Contact: NextPage = () => {
   const form = useForm({

@@ -1,11 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Anchor, Button, useMantineColorScheme } from "@mantine/core"
+import { Anchor, useMantineColorScheme } from "@mantine/core"
 import Link from "next/link"
 import React, { useContext } from "react"
 import {
   HeaderOpenContext,
   HeaderOpenToggleContext,
-} from "../../../context/Header"
+} from "src/context/HeaderContext"
 
 const navItems = [
   {
@@ -43,17 +43,21 @@ export const HeaderRight = () => {
         }`}
       >
         <ul className="items-center pt-36 md:p-0 text-2xl md:text-lg list-none font-bold m-0 pl-0 w-11/12 md:w-auto mx-auto space-y-3 md:space-y-0 md:flex md:space-x-6">
+          {/* header nav lists */}
           {navItems.map((item) => (
             <li key={item.label}>
               <Link href={item.href} passHref>
                 <Anchor
                   className="text-2xl md:text-lg"
                   component="a"
-                  sx={{
+                  sx={(theme) => ({
                     fontFamily: "Avenir Next, sans-serif",
                     color: "white",
                     "@media (min-width: 768px)": {
-                      color: "black",
+                      color:
+                        theme.colorScheme === "dark"
+                          ? theme.white
+                          : theme.colors.dark[7],
                     },
                     root: {
                       "&:hover": {
@@ -61,7 +65,7 @@ export const HeaderRight = () => {
                         opacity: 0.5,
                       },
                     },
-                  }}
+                  })}
                   onClick={() => setOpened((o) => !o)}
                 >
                   {item.label}
@@ -69,6 +73,7 @@ export const HeaderRight = () => {
               </Link>
             </li>
           ))}
+          {/* dark mode button */}
           <li className="hidden md:block">
             <button
               className="bg-transparent border-solid border-gray-300 rounded-lg p-2"

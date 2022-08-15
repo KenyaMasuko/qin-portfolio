@@ -6,7 +6,7 @@ import Link from "next/link"
 import {
   HeaderOpenContext,
   HeaderOpenToggleContext,
-} from "../../../context/Header"
+} from "src/context/HeaderContext"
 
 export const HeaderLeft = () => {
   const opened = useContext(HeaderOpenContext)

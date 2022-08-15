@@ -1,8 +1,8 @@
 import { Center, Container } from "@mantine/core"
 import Link from "next/link"
 import React from "react"
-import { LinkButton } from "../../Element/LinkButton"
-import { HeadingTitle } from "../../Element/Title"
+import { LinkButton } from "src/components/Element/LinkButton"
+import { HeadingTitle } from "src/components/Element/Title"
 
 export type BlogPost = {
   header: string
