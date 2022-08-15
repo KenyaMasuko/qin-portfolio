@@ -15,9 +15,9 @@ export const FirstView = () => {
           <Title order={1} className="text-2xl md:text-4xl m-0">
             Shimabu IT University
           </Title>
-          <h2 className="text-base mt-1 mb-0">
+          <Title order={2} className="text-base mt-1 mb-0">
             しまぶーのポートフォリオのページです
-          </h2>
+          </Title>
         </hgroup>
         <div className="space-x-3 mt-11 md:mt-0">
           <FontAwesomeIcon className="fa-lg" icon={faTwitter} />

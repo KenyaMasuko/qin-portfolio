@@ -1,18 +1,20 @@
 import { faCodeFork } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Center, Container, Progress } from "@mantine/core"
+import { Center, Progress, Title } from "@mantine/core"
 import React from "react"
-import { LinkButton } from "../../Element/LinkButton"
-import { HeadingTitle } from "../../Element/Title"
+import { LinkButton } from "src/components/Element/LinkButton"
+import { HeadingTitle } from "src/components/Element/Title"
 
 export const GithubTop = () => {
   return (
     <section>
       <HeadingTitle title="Github" />
       <div className="space-y-6">
-        {[...Array(5)].map((_, i) => (
-          <article key={i} className="space-y-4">
-            <h2 className="text-lg my-0">lightsound/nexst-tailwind</h2>
+        {[...Array(5)].map((_, index) => (
+          <article key={index} className="space-y-4">
+            <Title order={2} className="text-lg my-0">
+              lightsound/nexst-tailwind
+            </Title>
             <p className="text-base my-0">Next.js starter template.</p>
             <div className="text-xs text-gray-400 font-bold space-x-2 flex">
               <div>
