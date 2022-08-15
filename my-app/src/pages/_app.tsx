@@ -64,18 +64,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         withNormalizeCSS
       >
         <MyGlobalStyles />
-        <Head>
-          <meta
-            property="og:title"
-            content="Shimabu IT University"
-            key="Shimabu"
-          />
-          <meta property="og:image" content="/assets/itkingdom.png" />
-          <meta
-            name="description"
-            content="しまぶーのポートフォリオサイトです"
-          />
-        </Head>
         <Component {...pageProps} />
       </MantineProvider>
     </ColorSchemeProvider>

@@ -14,6 +14,8 @@ export const MetaHead: FC<MetaHeadProps> = ({
     <Head>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta property="og:title" content="Shimabu IT University" key="Shimabu" />
+      <meta property="og:image" content="/assets/itkingdom.png" />
       <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     </Head>
   )
