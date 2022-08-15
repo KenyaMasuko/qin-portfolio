@@ -11,6 +11,7 @@ import {
 //fontAwesome regularを追加
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { far } from "@fortawesome/free-regular-svg-icons"
+import Head from "next/head"
 library.add(far)
 
 const MyGlobalStyles: React.FC = () => (
@@ -63,6 +64,18 @@ function MyApp({ Component, pageProps }: AppProps) {
         withNormalizeCSS
       >
         <MyGlobalStyles />
+        <Head>
+          <meta
+            property="og:title"
+            content="Shimabu IT University"
+            key="Shimabu"
+          />
+          <meta property="og:image" content="/assets/itkingdom.png" />
+          <meta
+            name="description"
+            content="しまぶーのポートフォリオサイトです"
+          />
+        </Head>
         <Component {...pageProps} />
       </MantineProvider>
     </ColorSchemeProvider>
