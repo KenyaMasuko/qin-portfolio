@@ -10,7 +10,7 @@ const About: NextPage = () => {
       <MetaHead title="about" description="aboutページ" />
       <AppMain>
         <Container size="lg">
-          <HeadingTitle title="Blog" />
+          <HeadingTitle title="About" />
           <div className="space-y-6">
             <h2 className="text-xl my-0">Lightsound Shimabu</h2>
             <p className="text-base my-0">
