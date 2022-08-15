@@ -6,7 +6,7 @@ import { MetaHead } from "src/components/Element/Head"
 import { HeadingTitle } from "src/components/Element/Title"
 import { InfiniteScroll } from "src/components/InfiniteScroll"
 import { AppMain } from "src/components/Layout/Main"
-import { MockBlogData } from "src/Mock/MockBlogData"
+import { MockBlogData } from "src/mock/MockBlogData"
 
 const Blog: NextPage = () => {
   const router = useRouter()
