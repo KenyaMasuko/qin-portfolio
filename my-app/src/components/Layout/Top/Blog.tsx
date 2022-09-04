@@ -1,14 +1,8 @@
-import { Center, Container } from "@mantine/core"
-import Link from "next/link"
-import React from "react"
-import { LinkButton } from "src/components/element/linkButton"
-import { HeadingTitle } from "src/components/element/title"
-
-export type BlogPost = {
-  header: string
-  description: string
-  date: string
-}
+import { Center, Container } from "@mantine/core";
+import Link from "next/link";
+import React from "react";
+import { LinkButton } from "src/components/element/linkButton";
+import { HeadingTitle } from "src/components/element/title";
 
 export const BlogTop = () => {
   return (
@@ -42,5 +36,5 @@ export const BlogTop = () => {
         </Center>
       </Container>
     </section>
-  )
-}
+  );
+};
