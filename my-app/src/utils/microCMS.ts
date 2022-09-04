@@ -9,14 +9,13 @@ export const clientMicroCMS = createClient({
 //IDから記事を取得
 export const getPostById = async (id: string) => {
   try {
-    const response = await clientMicroCMS.getListDetail({
+    const post = await clientMicroCMS.getListDetail<Omit<Blog, "id">>({
       endpoint: "blogs",
       queries: {
         fields: "title,content,publishedAt",
       },
       contentId: id,
     });
-    const post: Omit<Blog, "id"> = response.content;
     return post;
   } catch (error: any) {
     console.log("~~ getPostById ~~");
@@ -25,7 +24,7 @@ export const getPostById = async (id: string) => {
 };
 
 //全記事を取得する（記事一覧に使用）
-export const getAllPost = async (maxLimit: number = 100) => {
+export const getAllPosts = async (maxLimit: number = 100) => {
   try {
     const response = await clientMicroCMS.getList({
       endpoint: "blogs",
@@ -37,6 +36,8 @@ export const getAllPost = async (maxLimit: number = 100) => {
     });
 
     const posts: Blog[] = response.contents;
+    console.log(posts);
+
     return posts;
   } catch (error: any) {
     console.log("~~ getAllPosts ~~");
