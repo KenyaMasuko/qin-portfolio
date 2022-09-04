@@ -1,3 +1,6 @@
 export type Blog = {
-  title: string
-}
+  publishedAt: string;
+  title: string;
+  content: string;
+  id: string;
+};
