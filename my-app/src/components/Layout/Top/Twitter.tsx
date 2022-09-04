@@ -48,7 +48,7 @@ export const Twitter = () => {
         ))}
       </div>
       <Center className="mt-12">
-        <LinkButton children="View on Twitter" link="#" />
+        <LinkButton link="#">View on Twitter</LinkButton>
       </Center>
     </section>
   );

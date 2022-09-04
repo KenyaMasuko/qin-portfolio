@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Center, Container, Image, SimpleGrid } from "@mantine/core";
 import React from "react";
 import { LinkButton } from "src/components/element/linkButton";
@@ -17,7 +18,7 @@ export const PortfolioTop = () => {
           {[...Array(6)].map((_, i) => (
             <article key={i}>
               <div className="bg-blue-600">
-                <Image src="/assets/itkingdom.png" />
+                <Image src="/assets/itkingdom.png" alt="itkingdom" />
               </div>
               <div className="space-y-4 pt-4">
                 <h2 className="text-xl my-2">"IT KINGDOM"</h2>

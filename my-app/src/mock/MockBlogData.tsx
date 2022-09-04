@@ -12,6 +12,7 @@ export class MockBlogData {
   >;
 
   constructor() {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [blogPosts, setBlogPosts] = useState(this.createDummyPosts());
     this.blogPosts = blogPosts;
     this.setBlogPosts = setBlogPosts;

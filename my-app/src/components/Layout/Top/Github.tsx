@@ -56,7 +56,7 @@ export const GithubTop = () => {
         ))}
       </div>
       <Center className="mt-12">
-        <LinkButton children="View on Github" link="#" />
+        <LinkButton link="#">View on Github</LinkButton>
       </Center>
     </section>
   );
