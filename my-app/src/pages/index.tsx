@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import { MetaHead } from "src/components/element/head";
-import { AppMain } from "src/components/layout/main";
-import { Main } from "src/components/layout/top";
+import { AppMain } from "src/components/lay/ma";
+import { Main } from "src/components/lay/to";
 
 const Home: NextPage = () => {
   return (

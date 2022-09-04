@@ -9,7 +9,7 @@ import { ParsedUrlQuery } from "querystring";
 import { getAllIds, getPostById } from "src/utils/microCMS";
 import { MetaHead } from "../../components/element/head";
 import { HeadingTitle } from "../../components/element/title";
-import { AppMain } from "../../components/layout/main";
+import { AppMain } from "../../components/lay/ma";
 
 const BlogDetail: NextPage = () => {
   return (
