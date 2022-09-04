@@ -21,12 +21,12 @@ export const PortfolioTop = () => {
                 <Image src="/assets/itkingdom.png" alt="itkingdom" />
               </div>
               <div className="space-y-4 pt-4">
-                <h2 className="text-xl my-2">"IT KINGDOM"</h2>
+                <h2 className="text-xl my-2">IT KINGDOM</h2>
                 <p className="text-base my-0">
-                  "当サロンのLPページ。React、Next.js、TypeScriptなどのモダンな技術を用いて作られています。初心者にちょうど良い難易度の制作物です。"
+                  当サロンのLPページ。React、Next.js、TypeScriptなどのモダンな技術を用いて作られています。初心者にちょうど良い難易度の制作物です。
                 </p>
                 <span className="text-xs font-bold text-gray-400 block">
-                  "2022-07-11"
+                  2022-07-11
                 </span>
               </div>
             </article>
