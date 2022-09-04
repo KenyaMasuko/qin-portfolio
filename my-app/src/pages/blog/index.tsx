@@ -8,7 +8,7 @@ import { MetaHead } from "src/components/element/head";
 import { HeadingTitle } from "src/components/element/title";
 import { AppMain } from "src/components/layout/main";
 import { Blog } from "src/types/type";
-import { getAllPost } from "src/utils/microCMS";
+import { getAllPosts } from "src/utils/microCMS";
 
 const Blog: NextPage<{ posts: Blog[] }> = ({ posts }) => {
   const router = useRouter();
@@ -17,16 +17,16 @@ const Blog: NextPage<{ posts: Blog[] }> = ({ posts }) => {
       <MetaHead title="blog" description="ブログページ" />
       <AppMain>
         <Container size="lg">
-          <HeadingTitle title="Blog" />
+          <HeadingTitle>Blog</HeadingTitle>
           <div className="space-y-6">
             {posts?.map((post) => (
               <article key={post.id} className="space-y-2">
                 <Link href={`${router.pathname}/${post.id}`}>
                   <a className="no-underline hover:opacity-50 space-y-3">
                     <h2 className="text-xl my-0">{post.title}</h2>
-                    <p className="text-base my-0">
+                    <div className="text-base my-0">
                       <ConvertContent contentHTML={post.content} />
-                    </p>
+                    </div>
                     <ConvertDate dateISO={post.publishedAt} />
                   </a>
                 </Link>
@@ -40,7 +40,7 @@ const Blog: NextPage<{ posts: Blog[] }> = ({ posts }) => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllPost();
+  const posts = await getAllPosts();
   return { props: { posts } };
 };
 

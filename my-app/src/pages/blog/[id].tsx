@@ -6,29 +6,29 @@ import type {
   NextPage,
 } from "next";
 import { ParsedUrlQuery } from "querystring";
+import { ConvertContent } from "src/components/element/convertContent";
+import { ConvertDate } from "src/components/element/convertDate";
+import { Blog } from "src/types/type";
 import { getAllIds, getPostById } from "src/utils/microCMS";
 import { MetaHead } from "../../components/element/head";
 import { HeadingTitle } from "../../components/element/title";
 import { AppMain } from "../../components/layout/main";
+import parse from "html-react-parser";
 
-const BlogDetail: NextPage = () => {
+const BlogDetail: NextPage<{ post: Omit<Blog, "id"> }> = ({ post }) => {
+  const { title, publishedAt, content } = post;
+
   return (
     <>
       <MetaHead title="blog detail page" description="blogの詳細ページです" />
       <AppMain>
         <Container size="lg">
           <article className="space-y-2">
-            <HeadingTitle title="This is Header" />
-            <p className="text-base my-0">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-            </p>
-            <time
-              className="text-xs font-bold text-gray-400 block"
-              dateTime="2022-07-11"
-            >
-              2022.07.11
-            </time>
+            <HeadingTitle>{title}</HeadingTitle>
+            <div className="text-base my-0">
+              <ConvertContent contentHTML={content} />
+            </div>
+            <ConvertDate dateISO={publishedAt} />
           </article>
         </Container>
       </AppMain>
@@ -54,7 +54,6 @@ export const getStaticProps = async (
   const { id } = context.params!;
 
   const post = await getPostById(id);
-  console.log(post);
 
   return { props: { post } };
 };
