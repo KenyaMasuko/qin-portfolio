@@ -9,7 +9,7 @@ import {
 import type { NextPage } from "next";
 import { useForm } from "@mantine/form";
 import { MetaHead } from "src/components/element/head";
-import { AppMain } from "src/components/lay/ma";
+import { AppMain } from "src/components/layout/main";
 import { HeadingTitle } from "src/components/element/title";
 
 const Contact: NextPage = () => {

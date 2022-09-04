@@ -6,7 +6,7 @@ import { ConvertContent } from "src/components/element/convertContent";
 import { ConvertDate } from "src/components/element/convertDate";
 import { MetaHead } from "src/components/element/head";
 import { HeadingTitle } from "src/components/element/title";
-import { AppMain } from "src/components/lay/ma";
+import { AppMain } from "src/components/layout/main";
 import { Blog } from "src/types/type";
 import { getAllPost } from "src/utils/microCMS";
 
