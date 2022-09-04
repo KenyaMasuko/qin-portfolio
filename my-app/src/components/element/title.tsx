@@ -1,5 +1,5 @@
-import { Title as MantineTitle } from "@mantine/core"
-import React, { FC, ReactNode } from "react"
+import { Title as MantineTitle } from "@mantine/core";
+import React, { FC, ReactNode } from "react";
 
 type TitleProps = { title: ReactNode }
 
@@ -11,5 +11,5 @@ export const HeadingTitle: FC<TitleProps> = ({ title }) => {
     >
       {title}
     </MantineTitle>
-  )
-}
+  );
+};

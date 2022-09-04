@@ -1,5 +1,5 @@
-import Head from "next/head"
-import React, { FC } from "react"
+import Head from "next/head";
+import React, { FC } from "react";
 
 type MetaHeadProps = {
   title: string
@@ -21,5 +21,5 @@ export const MetaHead: FC<MetaHeadProps> = ({
       />
       <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
     </Head>
-  )
-}
+  );
+};

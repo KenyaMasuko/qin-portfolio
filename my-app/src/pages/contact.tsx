@@ -5,12 +5,12 @@ import {
   Group,
   Textarea,
   TextInput,
-} from "@mantine/core"
-import type { NextPage } from "next"
-import { useForm } from "@mantine/form"
-import { MetaHead } from "src/components/element/head"
-import { AppMain } from "src/components/layout/main"
-import { HeadingTitle } from "src/components/element/title"
+} from "@mantine/core";
+import type { NextPage } from "next";
+import { useForm } from "@mantine/form";
+import { MetaHead } from "src/components/element/head";
+import { AppMain } from "src/components/layout/main";
+import { HeadingTitle } from "src/components/element/title";
 
 const Contact: NextPage = () => {
   const form = useForm({
@@ -28,7 +28,7 @@ const Contact: NextPage = () => {
           ? null
           : "適切なメールアドレスを入力してください",
     },
-  })
+  });
 
   return (
     <>
@@ -69,7 +69,7 @@ const Contact: NextPage = () => {
         </Container>
       </AppMain>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

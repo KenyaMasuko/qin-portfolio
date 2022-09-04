@@ -1,8 +1,8 @@
-import { Center, Image } from "@mantine/core"
-import Link from "next/link"
-import React from "react"
-import { LinkButton } from "src/components/element/linkButton"
-import { HeadingTitle } from "src/components/element/title"
+import { Center, Image } from "@mantine/core";
+import Link from "next/link";
+import React from "react";
+import { LinkButton } from "src/components/element/linkButton";
+import { HeadingTitle } from "src/components/element/title";
 
 export const Twitter = () => {
   return (
@@ -51,5 +51,5 @@ export const Twitter = () => {
         <LinkButton children="View on Twitter" link="#" />
       </Center>
     </section>
-  )
-}
+  );
+};

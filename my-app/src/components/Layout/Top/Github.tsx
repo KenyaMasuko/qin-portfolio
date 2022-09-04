@@ -1,9 +1,9 @@
-import { faCodeFork } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Center, Progress, Title } from "@mantine/core"
-import React from "react"
-import { LinkButton } from "src/components/element/linkButton"
-import { HeadingTitle } from "src/components/element/title"
+import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Center, Progress, Title } from "@mantine/core";
+import React from "react";
+import { LinkButton } from "src/components/element/linkButton";
+import { HeadingTitle } from "src/components/element/title";
 
 export const GithubTop = () => {
   return (
@@ -59,5 +59,5 @@ export const GithubTop = () => {
         <LinkButton children="View on Github" link="#" />
       </Center>
     </section>
-  )
-}
+  );
+};

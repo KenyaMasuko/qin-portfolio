@@ -1,8 +1,8 @@
-import { Container, Image, SimpleGrid } from "@mantine/core"
-import type { NextPage } from "next"
-import { MetaHead } from "src/components/element/head"
-import { HeadingTitle } from "src/components/element/title"
-import { AppMain } from "src/components/layout/main"
+import { Container, Image, SimpleGrid } from "@mantine/core";
+import type { NextPage } from "next";
+import { MetaHead } from "src/components/element/head";
+import { HeadingTitle } from "src/components/element/title";
+import { AppMain } from "src/components/layout/main";
 
 const Portfolio: NextPage = () => {
   return (
@@ -37,7 +37,7 @@ const Portfolio: NextPage = () => {
         </Container>
       </AppMain>
     </>
-  )
-}
+  );
+};
 
-export default Portfolio
+export default Portfolio;

@@ -1,11 +1,11 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { Anchor, useMantineColorScheme } from "@mantine/core"
-import Link from "next/link"
-import React, { useContext } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Anchor, useMantineColorScheme } from "@mantine/core";
+import Link from "next/link";
+import React, { useContext } from "react";
 import {
   HeaderOpenContext,
   HeaderOpenToggleContext,
-} from "src/context/HeaderContext"
+} from "src/context/HeaderContext";
 
 const navItems = [
   {
@@ -24,14 +24,14 @@ const navItems = [
     href: "/contact",
     label: "Contact",
   },
-] as const
+] as const;
 
 export const HeaderRight = () => {
-  const opened = useContext(HeaderOpenContext)
-  const setOpened = useContext(HeaderOpenToggleContext)
+  const opened = useContext(HeaderOpenContext);
+  const setOpened = useContext(HeaderOpenToggleContext);
 
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme()
-  const dark = colorScheme === "dark"
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
 
   return (
     <div>
@@ -90,5 +90,5 @@ export const HeaderRight = () => {
         </ul>
       </nav>
     </div>
-  )
-}
+  );
+};

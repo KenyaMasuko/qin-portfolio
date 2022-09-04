@@ -1,4 +1,4 @@
-import { useQuery } from "react-query"
+import { useQuery } from "react-query";
 
 /**
  * CSFの場合に使用する

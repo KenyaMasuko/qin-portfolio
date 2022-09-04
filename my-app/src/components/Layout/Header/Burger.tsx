@@ -1,15 +1,15 @@
-import { Burger as HB } from "@mantine/core"
-import { useContext } from "react"
+import { Burger as HB } from "@mantine/core";
+import { useContext } from "react";
 import {
   HeaderOpenContext,
   HeaderOpenToggleContext,
-} from "src/context/HeaderContext"
+} from "src/context/HeaderContext";
 
 export const Burger = () => {
-  const opened = useContext(HeaderOpenContext)
-  const setOpened = useContext(HeaderOpenToggleContext)
+  const opened = useContext(HeaderOpenContext);
+  const setOpened = useContext(HeaderOpenToggleContext);
 
-  const title = opened ? "Close navigation" : "Open navigation"
+  const title = opened ? "Close navigation" : "Open navigation";
 
-  return <HB opened onClick={() => setOpened((o) => !o)} title={title} />
-}
+  return <HB opened onClick={() => setOpened((o) => !o)} title={title} />;
+};

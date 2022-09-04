@@ -1,8 +1,8 @@
-import { Container, Header as MantineHeader } from "@mantine/core"
-import { FC } from "react"
-import { HeaderOpenProvider } from "src/context/HeaderContext"
-import { HeaderLeft } from "./headerLeft"
-import { HeaderRight } from "./headerRight"
+import { Container, Header as MantineHeader } from "@mantine/core";
+import { FC } from "react";
+import { HeaderOpenProvider } from "src/context/HeaderContext";
+import { HeaderLeft } from "./headerLeft";
+import { HeaderRight } from "./headerRight";
 
 export const Header: FC<{ height: number }> = ({ height }) => {
   return (
@@ -17,5 +17,5 @@ export const Header: FC<{ height: number }> = ({ height }) => {
         </Container>
       </MantineHeader>
     </HeaderOpenProvider>
-  )
-}
+  );
+};

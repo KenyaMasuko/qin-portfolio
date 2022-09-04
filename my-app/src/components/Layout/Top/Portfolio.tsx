@@ -1,7 +1,7 @@
-import { Center, Container, Image, SimpleGrid } from "@mantine/core"
-import React from "react"
-import { LinkButton } from "src/components/element/linkButton"
-import { HeadingTitle } from "src/components/element/title"
+import { Center, Container, Image, SimpleGrid } from "@mantine/core";
+import React from "react";
+import { LinkButton } from "src/components/element/linkButton";
+import { HeadingTitle } from "src/components/element/title";
 
 export const PortfolioTop = () => {
   return (
@@ -36,5 +36,5 @@ export const PortfolioTop = () => {
         </Center>
       </Container>
     </section>
-  )
-}
+  );
+};

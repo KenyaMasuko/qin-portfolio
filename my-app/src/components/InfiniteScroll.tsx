@@ -1,6 +1,6 @@
-import React, { FC, useEffect, useState } from "react"
-import { useIntersection } from "@mantine/hooks"
-import { Center, Loader, Transition } from "@mantine/core"
+import React, { FC, useEffect, useState } from "react";
+import { useIntersection } from "@mantine/hooks";
+import { Center, Loader, Transition } from "@mantine/core";
 
 type InfiniteScrollProp = {
   loadMoreData: () => Promise<{ moreDataYet: boolean }>
@@ -9,27 +9,27 @@ type InfiniteScrollProp = {
 export const InfiniteScroll: FC<InfiniteScrollProp> = ({ loadMoreData }) => {
   const { ref, entry } = useIntersection({
     threshold: 1,
-  })
+  });
 
-  const [isLoading, setIsLoading] = useState(false)
-  const [moreDataYet, setMoreDataYet] = useState(true)
+  const [isLoading, setIsLoading] = useState(false);
+  const [moreDataYet, setMoreDataYet] = useState(true);
 
   useEffect(() => {
     const fn = async () => {
       if (!entry?.isIntersecting) {
-        return
+        return;
       }
 
-      setIsLoading(true)
-      const result = await loadMoreData()
-      setIsLoading(false)
+      setIsLoading(true);
+      const result = await loadMoreData();
+      setIsLoading(false);
 
       if (!result.moreDataYet) {
-        setMoreDataYet(false)
+        setMoreDataYet(false);
       }
-    }
-    fn().then()
-  }, [entry, loadMoreData])
+    };
+    fn().then();
+  }, [entry, loadMoreData]);
 
   return (
     <Center>
@@ -48,5 +48,5 @@ export const InfiniteScroll: FC<InfiniteScrollProp> = ({ loadMoreData }) => {
         className={`${isLoading || !moreDataYet ? "hidden" : "block"}`}
       ></div>
     </Center>
-  )
-}
+  );
+};

@@ -1,6 +1,6 @@
-import { Button as MantineButton } from "@mantine/core"
-import Link from "next/link"
-import { FC, ReactNode } from "react"
+import { Button as MantineButton } from "@mantine/core";
+import Link from "next/link";
+import { FC, ReactNode } from "react";
 
 type ButtonProps = {
   link: string
@@ -32,5 +32,5 @@ export const LinkButton: FC<ButtonProps> = ({
         {children}
       </MantineButton>
     </Link>
-  )
-}
+  );
+};

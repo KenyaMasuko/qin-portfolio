@@ -1,18 +1,18 @@
-import "../styles/globals.css"
-import { useState } from "react"
-import type { AppProps } from "next/app"
+import "../styles/globals.css";
+import { useState } from "react";
+import type { AppProps } from "next/app";
 import {
   ColorSchemeProvider,
   MantineProvider,
   ColorScheme,
   Global,
-} from "@mantine/core"
+} from "@mantine/core";
 
 //fontAwesome regularを追加
-import { library } from "@fortawesome/fontawesome-svg-core"
-import { far } from "@fortawesome/free-regular-svg-icons"
-import { SWRConfig } from "swr"
-library.add(far)
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { far } from "@fortawesome/free-regular-svg-icons";
+import { SWRConfig } from "swr";
+library.add(far);
 
 const MyGlobalStyles: React.FC = () => (
   <Global
@@ -39,7 +39,7 @@ const MyGlobalStyles: React.FC = () => (
       },
     })}
   />
-)
+);
 
 // const queryClient = new QueryClient({
 //   defaultOptions: {
@@ -57,9 +57,9 @@ const MyGlobalStyles: React.FC = () => (
 // }
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>("light")
+  const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
   const toggleColorScheme = (value?: ColorScheme) =>
-    setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"))
+    setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
 
   return (
     <ColorSchemeProvider
@@ -82,7 +82,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Component {...pageProps} />
       </MantineProvider>
     </ColorSchemeProvider>
-  )
+  );
 }
 
-export default MyApp
+export default MyApp;

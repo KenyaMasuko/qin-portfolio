@@ -1,21 +1,21 @@
-import React, { useContext } from "react"
-import { Burger, Container, Title, useMantineColorScheme } from "@mantine/core"
+import React, { useContext } from "react";
+import { Burger, Container, Title, useMantineColorScheme } from "@mantine/core";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import Link from "next/link"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import {
   HeaderOpenContext,
   HeaderOpenToggleContext,
-} from "src/context/HeaderContext"
+} from "src/context/HeaderContext";
 
 export const HeaderLeft = () => {
-  const opened = useContext(HeaderOpenContext)
-  const setOpened = useContext(HeaderOpenToggleContext)
+  const opened = useContext(HeaderOpenContext);
+  const setOpened = useContext(HeaderOpenToggleContext);
 
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme()
-  const dark = colorScheme === "dark"
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
 
-  const title = opened ? "Close navigation" : "Open navigation"
+  const title = opened ? "Close navigation" : "Open navigation";
 
   return (
     <Container size="lg" px={0} className="h-full relative z-40 md:p-0 md:m-0">
@@ -56,5 +56,5 @@ export const HeaderLeft = () => {
         </button>
       </div>
     </Container>
-  )
-}
+  );
+};
