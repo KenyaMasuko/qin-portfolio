@@ -7,7 +7,7 @@ import { HeadingTitle } from "src/components/element/title";
 export const Twitter = () => {
   return (
     <section>
-      <HeadingTitle title="Twitter" />
+      <HeadingTitle>Twitter</HeadingTitle>
       <div className="space-y-6">
         {[...Array(3)].map((_, i) => (
           <article key={i} className="flex items-start">

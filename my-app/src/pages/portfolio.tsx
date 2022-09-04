@@ -10,7 +10,7 @@ const Portfolio: NextPage = () => {
       <MetaHead title="Portfolio" description="ポートフォリオページ" />
       <AppMain>
         <Container size="lg">
-          <HeadingTitle title="Portfolio" />
+          <HeadingTitle>Portfolio</HeadingTitle>
           <SimpleGrid
             breakpoints={[
               { minWidth: 768, cols: 2, spacing: "md" },

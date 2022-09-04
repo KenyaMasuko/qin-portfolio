@@ -1,31 +1,29 @@
 import { Center, Container } from "@mantine/core";
 import Link from "next/link";
-import React from "react";
+import { useRouter } from "next/router";
+import React, { FC } from "react";
+import { ConvertContent } from "src/components/element/convertContent";
+import { ConvertDate } from "src/components/element/convertDate";
 import { LinkButton } from "src/components/element/linkButton";
 import { HeadingTitle } from "src/components/element/title";
+import { Blog } from "src/types/type";
 
-export const BlogTop = () => {
+export const BlogTop: FC<{ posts: Blog[] }> = ({ posts }) => {
+  const router = useRouter();
   return (
     <section>
       <Container size="lg">
-        <HeadingTitle title="Blog" />
+        <HeadingTitle>Blog</HeadingTitle>
         <div className="space-y-6">
-          {[...Array(4)].map((_, i) => (
-            <article key={i} className="space-y-2">
-              <Link href={`/blog/${i}`}>
+          {posts?.map((post) => (
+            <article key={post.id} className="space-y-2">
+              <Link href={`blog/${post.id}`}>
                 <a className="no-underline hover:opacity-50 space-y-3">
-                  <h2 className="text-xl my-0">This is Header</h2>
-                  <p className="text-base my-0">
-                    Amet minim mollit non deserunt ullamco est sit aliqua dolor
-                    do amet sint. Velit officia consequat duis enim velit
-                    mollit.
-                  </p>
-                  <time
-                    className="text-xs font-bold text-gray-400 block"
-                    dateTime="2022-07-11"
-                  >
-                    2022.07.11
-                  </time>
+                  <h2 className="text-xl my-0">{post.title}</h2>
+                  <div className="text-base my-0">
+                    <ConvertContent contentHTML={post.content} />
+                  </div>
+                  <ConvertDate dateISO={post.publishedAt} />
                 </a>
               </Link>
             </article>

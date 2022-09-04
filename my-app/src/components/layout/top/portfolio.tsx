@@ -8,7 +8,7 @@ export const PortfolioTop = () => {
   return (
     <section>
       <Container size="lg" className="mx-auto">
-        <HeadingTitle title="Portfolio" />
+        <HeadingTitle>Portfolio</HeadingTitle>
         <SimpleGrid
           breakpoints={[
             { minWidth: 768, cols: 2, spacing: "md" },

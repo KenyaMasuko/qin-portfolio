@@ -8,7 +8,7 @@ import { HeadingTitle } from "src/components/element/title";
 export const GithubTop = () => {
   return (
     <section>
-      <HeadingTitle title="Github" />
+      <HeadingTitle>Github</HeadingTitle>
       <div className="space-y-6">
         {[...Array(5)].map((_, index) => (
           <article key={index} className="space-y-4">

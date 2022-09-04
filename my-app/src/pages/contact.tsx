@@ -35,7 +35,7 @@ const Contact: NextPage = () => {
       <MetaHead title="Contact" description="コンタクトページ" />
       <AppMain>
         <Container size="lg">
-          <HeadingTitle title="Contact" />
+          <HeadingTitle>Contact</HeadingTitle>
           <Box>
             <form onSubmit={form.onSubmit((values) => console.log(values))}>
               <Box className="space-y-6">
