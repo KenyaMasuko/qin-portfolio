@@ -1,10 +1,10 @@
 import { Box, Container, SimpleGrid } from "@mantine/core"
 import React from "react"
-import { BlogTop } from "./Blog"
-import { FirstView } from "./FirstView"
-import { GithubTop } from "./Github"
-import { PortfolioTop } from "./Portfolio"
-import { Twitter } from "./Twitter"
+import { BlogTop } from "./blog"
+import { FirstView } from "./firstView"
+import { GithubTop } from "./github"
+import { PortfolioTop } from "./portfolio"
+import { Twitter } from "./twitter"
 
 export const Main = () => {
   return (

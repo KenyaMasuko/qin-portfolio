@@ -1,7 +1,7 @@
 import { AppShell } from "@mantine/core"
 import { FC, ReactNode } from "react"
-import { Footer } from "../Footer"
-import { Header } from "../Header"
+import { Footer } from "../footer"
+import { Header } from "../header"
 
 export const AppMain: FC<{ children: ReactNode }> = ({ children }) => {
   return (

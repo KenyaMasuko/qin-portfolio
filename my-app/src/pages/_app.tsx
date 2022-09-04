@@ -11,7 +11,7 @@ import {
 //fontAwesome regularを追加
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { far } from "@fortawesome/free-regular-svg-icons"
-import Head from "next/head"
+import { SWRConfig } from "swr"
 library.add(far)
 
 const MyGlobalStyles: React.FC = () => (
@@ -40,6 +40,21 @@ const MyGlobalStyles: React.FC = () => (
     })}
   />
 )
+
+// const queryClient = new QueryClient({
+//   defaultOptions: {
+//     queries: {
+//       retry: false,
+//       refetchOnWindowFocus: false,
+//     },
+//   },
+// })
+
+// const fetcher = async (...args) => {
+//   const res = await fetch(...args)
+//   const json = await res.json()
+//   return json
+// }
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [colorScheme, setColorScheme] = useState<ColorScheme>("light")

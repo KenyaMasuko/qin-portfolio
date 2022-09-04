@@ -1,8 +1,8 @@
 import { Container } from "@mantine/core"
 import type { NextPage } from "next"
-import { MetaHead } from "../../components/Element/Head"
-import { HeadingTitle } from "../../components/Element/Title"
-import { AppMain } from "../../components/Layout/Main"
+import { MetaHead } from "../../components/element/head"
+import { HeadingTitle } from "../../components/element/title"
+import { AppMain } from "../../components/layout/main"
 
 const BlogDetail: NextPage = () => {
   return (

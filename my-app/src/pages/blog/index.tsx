@@ -1,14 +1,19 @@
 import { Container } from "@mantine/core"
-import type { NextPage } from "next"
+import type { GetStaticProps, NextPage } from "next"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { MetaHead } from "src/components/Element/Head"
-import { HeadingTitle } from "src/components/Element/Title"
-import { InfiniteScroll } from "src/components/InfiniteScroll"
-import { AppMain } from "src/components/Layout/Main"
+import { useEffect } from "react"
+import { QueryClient } from "react-query"
+import { MetaHead } from "src/components/element/head"
+import { HeadingTitle } from "src/components/element/title"
+import { InfiniteScroll } from "src/components/infiniteScroll"
+import { AppMain } from "src/components/layout/main"
+// import { useQueryBlogs } from "src/hooks/useQueryBlogs"
 import { MockBlogData } from "src/mock/MockBlogData"
+import { getAllPost } from "src/utils/microCMS"
+import useSWR from "swr"
 
-const Blog: NextPage = () => {
+const Blog: NextPage<any> = ({ res }) => {
   const router = useRouter()
   const mockBlogData = new MockBlogData()
   return (
@@ -42,6 +47,23 @@ const Blog: NextPage = () => {
       </AppMain>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps = async () => {
+  // const getBlog = async () => {
+  //   const res = await microCMS.get({
+  //     endpoint: "blogs",
+  //   })
+  //   return res
+  // }
+  // try {
+  //   const blogs = await getBlog()
+  //   console.log(blogs)
+  // } catch (error) {
+  //   console.log(error)
+  // }
+
+  return { props: {} }
 }
 
 export default Blog

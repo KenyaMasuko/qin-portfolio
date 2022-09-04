@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from "react"
-import { BlogPost } from "src/components/Layout/Top/Blog"
+import { BlogPost } from "src/components/layout/top/blog"
 
 export class MockBlogData {
   readonly blogPosts: BlogPost[]
