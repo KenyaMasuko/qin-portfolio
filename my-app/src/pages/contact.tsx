@@ -8,9 +8,9 @@ import {
 } from "@mantine/core";
 import type { NextPage } from "next";
 import { useForm } from "@mantine/form";
-import { MetaHead } from "src/components/element/head";
-import { AppMain } from "src/components/layout/main";
-import { HeadingTitle } from "src/components/element/title";
+import { MetaHead } from "src/components/Element/Head";
+import { AppMain } from "src/components/Layout/Main";
+import { HeadingTitle } from "src/components/Element/Title";
 
 const Contact: NextPage = () => {
   const form = useForm({

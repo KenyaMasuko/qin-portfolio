@@ -1,15 +1,13 @@
 import { Center, Container } from "@mantine/core";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import React, { FC } from "react";
-import { ConvertContent } from "src/components/element/convertContent";
-import { ConvertDate } from "src/components/element/convertDate";
-import { LinkButton } from "src/components/element/linkButton";
-import { HeadingTitle } from "src/components/element/title";
+import { ConvertContent } from "src/components/Element/ConvertContent";
+import { ConvertDate } from "src/components/Element/ConvertDate";
+import { LinkButton } from "src/components/Element/LinkButton";
+import { HeadingTitle } from "src/components/Element/Title";
 import { Blog } from "src/types/type";
 
 export const BlogTop: FC<{ posts: Blog[] }> = ({ posts }) => {
-  const router = useRouter();
   return (
     <section>
       <Container size="lg">

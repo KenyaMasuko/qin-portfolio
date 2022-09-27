@@ -1,8 +1,8 @@
 import { Container } from "@mantine/core";
 import type { NextPage } from "next";
-import { MetaHead } from "src/components/element/head";
-import { HeadingTitle } from "src/components/element/title";
-import { AppMain } from "src/components/layout/main";
+import { MetaHead } from "src/components/Element/Head";
+import { HeadingTitle } from "src/components/Element/Title";
+import { AppMain } from "src/components/Layout/Main";
 
 const About: NextPage = () => {
   return (

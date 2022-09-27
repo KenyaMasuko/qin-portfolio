@@ -6,14 +6,13 @@ import type {
   NextPage,
 } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { ConvertContent } from "src/components/element/convertContent";
-import { ConvertDate } from "src/components/element/convertDate";
+import { ConvertContent } from "src/components/Element/ConvertContent";
+import { ConvertDate } from "src/components/Element/ConvertDate";
+import { MetaHead } from "src/components/Element/Head";
+import { HeadingTitle } from "src/components/Element/Title";
 import { Blog } from "src/types/type";
 import { getAllIds, getPostById } from "src/utils/microCMS";
-import { MetaHead } from "../../components/element/head";
-import { HeadingTitle } from "../../components/element/title";
-import { AppMain } from "../../components/layout/main";
-import parse from "html-react-parser";
+import { AppMain } from "../../components/Layout/Main";
 
 const BlogDetail: NextPage<{ post: Omit<Blog, "id"> }> = ({ post }) => {
   const { title, publishedAt, content } = post;
