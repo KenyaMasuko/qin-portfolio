@@ -36,7 +36,6 @@ export const getAllPosts = async (maxLimit: number = 100) => {
     });
 
     const posts: Blog[] = response.contents;
-    console.log(posts);
 
     return posts;
   } catch (error: any) {
