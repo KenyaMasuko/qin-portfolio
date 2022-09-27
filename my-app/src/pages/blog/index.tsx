@@ -2,11 +2,11 @@ import { Container } from "@mantine/core";
 import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ConvertContent } from "src/context/Element/ConvertContent";
-import { ConvertDate } from "src/context/Element/ConvertDate";
-import { MetaHead } from "src/context/Element/Head";
-import { HeadingTitle } from "src/context/Element/Title";
-import { AppMain } from "src/context/Layout/Main";
+import { ConvertContent } from "src/components/Element/ConvertContent";
+import { ConvertDate } from "src/components/Element/ConvertDate";
+import { MetaHead } from "src/components/Element/Head";
+import { HeadingTitle } from "src/components/Element/Title";
+import { AppMain } from "src/components/Layout/Main";
 import { Blog } from "src/types/type";
 import { getAllPosts } from "src/utils/microCMS";
 

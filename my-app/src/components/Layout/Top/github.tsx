@@ -2,8 +2,8 @@ import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Center, Progress, Title } from "@mantine/core";
 import React from "react";
-import { LinkButton } from "src/context/Element/LinkButton";
-import { HeadingTitle } from "src/context/Element/Title";
+import { LinkButton } from "src/components/Element/LinkButton";
+import { HeadingTitle } from "src/components/Element/Title";
 
 export const GithubTop = () => {
   return (

@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { Center, Container, Image, SimpleGrid } from "@mantine/core";
 import React from "react";
-import { LinkButton } from "src/context/Element/LinkButton";
-import { HeadingTitle } from "src/context/Element/Title";
+import { LinkButton } from "src/components/Element/LinkButton";
+import { HeadingTitle } from "src/components/Element/Title";
 
 export const PortfolioTop = () => {
   return (

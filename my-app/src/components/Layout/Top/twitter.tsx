@@ -1,8 +1,8 @@
 import { Center, Image } from "@mantine/core";
 import Link from "next/link";
 import React from "react";
-import { LinkButton } from "src/context/Element/LinkButton";
-import { HeadingTitle } from "src/context/Element/Title";
+import { LinkButton } from "src/components/Element/LinkButton";
+import { HeadingTitle } from "src/components/Element/Title";
 
 export const Twitter = () => {
   return (
