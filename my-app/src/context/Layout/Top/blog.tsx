@@ -1,10 +1,10 @@
 import { Center, Container } from "@mantine/core";
 import Link from "next/link";
 import React, { FC } from "react";
-import { ConvertContent } from "src/components/Element/ConvertContent";
-import { ConvertDate } from "src/components/Element/ConvertDate";
-import { LinkButton } from "src/components/Element/LinkButton";
-import { HeadingTitle } from "src/components/Element/Title";
+import { ConvertContent } from "src/context/Element/ConvertContent";
+import { ConvertDate } from "src/context/Element/ConvertDate";
+import { LinkButton } from "src/context/Element/LinkButton";
+import { HeadingTitle } from "src/context/Element/Title";
 import { Blog } from "src/types/type";
 
 export const BlogTop: FC<{ posts: Blog[] }> = ({ posts }) => {

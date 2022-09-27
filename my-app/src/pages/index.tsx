@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
-import { MetaHead } from "src/components/Element/Head";
-import { AppMain } from "src/components/Layout/Main";
-import { Main } from "src/components/Layout/Top";
+import { MetaHead } from "src/context/Element/Head";
+import { AppMain } from "src/context/Layout/Main";
+import { Main } from "src/context/Layout/Top";
 import { Blog } from "src/types/type";
 import { getAllPosts } from "src/utils/microCMS";
 
