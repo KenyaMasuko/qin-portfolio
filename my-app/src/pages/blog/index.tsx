@@ -7,7 +7,7 @@ import { ConvertDate } from "src/components/Element/ConvertDate";
 import { MetaHead } from "src/components/Element/Head";
 import { HeadingTitle } from "src/components/Element/Title";
 import { AppMain } from "src/components/Layout/Main";
-import { Blog } from "src/types/type";
+import { Blog } from "src/types/blog";
 import { getAllPosts } from "src/utils/microCMS";
 
 const Blog: NextPage<{ posts: Blog[] }> = ({ posts }) => {

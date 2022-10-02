@@ -1,5 +1,5 @@
 import { createClient } from "microcms-js-sdk";
-import { Blog } from "src/types/type";
+import { Blog } from "src/types/blog";
 
 export const clientMicroCMS = createClient({
   serviceDomain: `${process.env.MICROCMS_SERVICE_DOMAIN}`,

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import { MetaHead } from "src/components/Element/Head";
 import { AppMain } from "src/components/Layout/Main";
 import { Main } from "src/components/Layout/Top";
-import { Blog } from "src/types/type";
+import { Blog } from "src/types/blog";
 import { getAllPosts } from "src/utils/microCMS";
 
 const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {

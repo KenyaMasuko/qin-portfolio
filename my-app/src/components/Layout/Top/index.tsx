@@ -1,6 +1,6 @@
 import { Box, Container, SimpleGrid } from "@mantine/core";
 import React, { FC } from "react";
-import { Blog } from "src/types/type";
+import { Blog } from "src/types/blog";
 import { BlogTop } from "./Blog";
 import { FirstView } from "./FirstView";
 import { GithubTop } from "./Github";

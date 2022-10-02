@@ -5,7 +5,7 @@ import { ConvertContent } from "src/components/Element/ConvertContent";
 import { ConvertDate } from "src/components/Element/ConvertDate";
 import { LinkButton } from "src/components/Element/LinkButton";
 import { HeadingTitle } from "src/components/Element/Title";
-import { Blog } from "src/types/type";
+import { Blog } from "src/types/blog";
 
 export const BlogTop: FC<{ posts: Blog[] }> = ({ posts }) => {
   return (
