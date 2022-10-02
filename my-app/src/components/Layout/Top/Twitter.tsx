@@ -3,8 +3,19 @@ import Link from "next/link";
 import React from "react";
 import { LinkButton } from "src/components/Element/LinkButton";
 import { HeadingTitle } from "src/components/Element/Title";
+import { useFetchTweets } from "src/hooks/useFetchTweets";
+import { TweetData } from "src/types/twitter";
 
 export const Twitter = () => {
+  const {
+    tweets,
+    userName,
+    profileImageUrl,
+    userScreenName,
+    isLoading,
+    isError,
+  }: TweetData = useFetchTweets();
+
   return (
     <section>
       <HeadingTitle>Twitter</HeadingTitle>
