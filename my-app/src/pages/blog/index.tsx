@@ -12,6 +12,8 @@ import { getAllPosts } from "src/utils/microCMS";
 
 const Blog: NextPage<{ posts: Blog[] }> = ({ posts }) => {
   const router = useRouter();
+  console.log(posts);
+
   return (
     <>
       <MetaHead title="blog" description="ブログページ" />

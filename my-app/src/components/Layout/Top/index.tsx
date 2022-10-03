@@ -1,5 +1,5 @@
-import { Box, Container, SimpleGrid } from "@mantine/core";
-import React, { FC } from "react";
+import { Box, Container, Loader, SimpleGrid } from "@mantine/core";
+import React, { FC, Suspense } from "react";
 import { Blog } from "src/types/blog";
 import { BlogTop } from "./Blog";
 import { FirstView } from "./FirstView";
@@ -11,7 +11,9 @@ export const Main: FC<{ posts: Blog[] }> = ({ posts }) => {
   return (
     <Box className="space-y-5">
       <FirstView />
-      <BlogTop posts={posts} />
+      <Suspense fallback={<Loader />}>
+        <BlogTop posts={posts} />
+      </Suspense>
       <PortfolioTop />
       <Container size="lg">
         <SimpleGrid
@@ -22,7 +24,9 @@ export const Main: FC<{ posts: Blog[] }> = ({ posts }) => {
             <GithubTop />
           </Box>
           <Box>
-            <Twitter />
+            <Suspense fallback={<Loader />}>
+              <Twitter />
+            </Suspense>
           </Box>
         </SimpleGrid>
       </Container>

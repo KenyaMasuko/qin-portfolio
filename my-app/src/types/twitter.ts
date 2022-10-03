@@ -5,10 +5,9 @@ export type TweetData = {
     edit_history_tweet_ids: string[];
     id: string;
     text: string;
-  };
+  }[];
   userName: string;
   profileImageUrl: string;
   userScreenName: string;
-  isLoading: boolean;
   isError: string | undefined;
 };
