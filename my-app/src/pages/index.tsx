@@ -9,8 +9,8 @@ const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
   return (
     <>
       <MetaHead
-        title="Shinmabu It University"
-        description="しまぶーのポートフォリオのためのページです"
+        title="Kenya's Portfolio"
+        description="けんやのポートフォリオのためのページです"
       />
       <AppMain>
         <Main posts={posts} />

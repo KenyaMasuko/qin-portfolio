@@ -36,7 +36,7 @@ export const HeaderLeft = () => {
             }`}
           >
             <Title className="text-lg m-0" order={1}>
-              Shimabu IT University
+              Kenya&apos;s Portfolio
             </Title>
           </a>
         </Link>

@@ -13,10 +13,10 @@ export const FirstView = () => {
       >
         <hgroup>
           <Title order={1} className="text-2xl md:text-4xl m-0">
-            Shimabu IT University
+            Kenya&apos;s Portfolio
           </Title>
           <Title order={2} className="text-base mt-1 mb-0">
-            しまぶーのポートフォリオのページです
+            けんやのポートフォリオのページです
           </Title>
         </hgroup>
         <div className="space-x-3 mt-11 md:mt-0">

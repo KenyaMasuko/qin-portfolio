@@ -16,7 +16,7 @@ const Blog: NextPage<{ posts: Blog[] }> = ({ posts }) => {
 
   return (
     <>
-      <MetaHead title="blog" description="ブログページ" />
+      <MetaHead title="Blog" description="ブログページ" />
       <AppMain>
         <Container size="lg">
           <HeadingTitle>Blog</HeadingTitle>
