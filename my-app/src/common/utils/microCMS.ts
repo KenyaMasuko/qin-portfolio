@@ -2,8 +2,8 @@ import { createClient } from "microcms-js-sdk";
 import { Blog } from "@/common/types/blog";
 
 export const clientMicroCMS = createClient({
-  serviceDomain: `${process.env.MICROCMS_SERVICE_DOMAIN}`,
-  apiKey: `${process.env.MICROCMS_API_KEY}`,
+  serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+  apiKey: process.env.MICROCMS_API_KEY,
 });
 
 //IDから記事を取得
