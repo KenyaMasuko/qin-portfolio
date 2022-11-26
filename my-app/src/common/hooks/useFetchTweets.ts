@@ -2,7 +2,7 @@ import { fetcher } from "@/common/utils/fetcher";
 import useSWR from "swr";
 
 export const useFetchTweets = () => {
-  const { data, error } = useSWR("./api/tweets", fetcher);
+  const { data, error } = useSWR("/api/tweets", fetcher);
 
   return {
     tweets: data?.data,

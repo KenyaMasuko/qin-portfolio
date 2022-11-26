@@ -1,13 +1,8 @@
 import { RepositoryResponse } from "src/pages/api/github";
 import useSWR from "swr";
+import { fetcher } from "../utils/fetcher";
 
-const fetcher = async (url: string) => {
-  const res = await fetch(url);
-  const json = await res.json();
-  return json;
-};
-
-export const useGithubRepo = () => {
+export const useFetchGithubRepo = () => {
   const { data, error } = useSWR<RepositoryResponse[]>("/api/github", fetcher);
 
   return { data, error };
