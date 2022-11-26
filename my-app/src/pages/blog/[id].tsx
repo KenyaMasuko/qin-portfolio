@@ -1,14 +1,8 @@
 import { Container } from "@mantine/core";
-import type {
-  GetStaticPaths,
-  GetStaticProps,
-  GetStaticPropsContext,
-  NextPage,
-} from "next";
+import type { GetStaticPropsContext, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { ConvertContent } from "src/components/Element/ConvertContent";
-import { ConvertDate } from "src/components/Element/ConvertDate";
-import { MetaHead } from "src/components/Element/Head";
+import { ConvertContent } from "src/components/functional/ConvertContent";
+import { ConvertDate } from "src/components/functional/ConvertDate";
 import { HeadingTitle } from "src/components/Element/Title";
 import { AppMain } from "src/components/Layout/Main";
 import { Blog } from "src/types/blog";
@@ -19,8 +13,7 @@ const BlogDetail: NextPage<{ post: Omit<Blog, "id"> }> = ({ post }) => {
 
   return (
     <>
-      <MetaHead title="blog detail page" description="blogの詳細ページです" />
-      <AppMain>
+      <AppMain title={`けんやのポートフォリオ | ${title}`} description={title}>
         <Container size="lg">
           <article className="space-y-2">
             <HeadingTitle>{title}</HeadingTitle>

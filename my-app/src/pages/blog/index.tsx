@@ -2,9 +2,8 @@ import { Container } from "@mantine/core";
 import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ConvertContent } from "src/components/Element/ConvertContent";
-import { ConvertDate } from "src/components/Element/ConvertDate";
-import { MetaHead } from "src/components/Element/Head";
+import { ConvertContent } from "src/components/functional/ConvertContent";
+import { ConvertDate } from "src/components/functional/ConvertDate";
 import { HeadingTitle } from "src/components/Element/Title";
 import { AppMain } from "src/components/Layout/Main";
 import { Blog } from "src/types/blog";
@@ -16,8 +15,10 @@ const Blog: NextPage<{ posts: Blog[] }> = ({ posts }) => {
 
   return (
     <>
-      <MetaHead title="Blog" description="ブログページ" />
-      <AppMain>
+      <AppMain
+        title="けんやのポートフォリオ | ブログページ"
+        description="けんやのブログページです"
+      >
         <Container size="lg">
           <HeadingTitle>Blog</HeadingTitle>
           <div className="space-y-6">

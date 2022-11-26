@@ -1,14 +1,15 @@
 import { Container, Image, SimpleGrid } from "@mantine/core";
 import type { NextPage } from "next";
-import { MetaHead } from "src/components/Element/Head";
 import { HeadingTitle } from "src/components/Element/Title";
 import { AppMain } from "src/components/Layout/Main";
 
 const Portfolio: NextPage = () => {
   return (
     <>
-      <MetaHead title="Portfolio" description="ポートフォリオページ" />
-      <AppMain>
+      <AppMain
+        title="けんやのポートフォリオ | 実績ページ"
+        description="けんやが実際に担当したプロジェクトです。"
+      >
         <Container size="lg">
           <HeadingTitle>Portfolio</HeadingTitle>
           <SimpleGrid

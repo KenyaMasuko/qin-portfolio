@@ -1,14 +1,15 @@
 import { Container } from "@mantine/core";
 import type { NextPage } from "next";
-import { MetaHead } from "src/components/Element/Head";
 import { HeadingTitle } from "src/components/Element/Title";
 import { AppMain } from "src/components/Layout/Main";
 
 const About: NextPage = () => {
   return (
     <>
-      <MetaHead title="About" description="Aboutページ" />
-      <AppMain>
+      <AppMain
+        title="けんやのポートフォリオ | Aboutページ"
+        description="けんやについてのページです"
+      >
         <Container size="lg">
           <HeadingTitle>About</HeadingTitle>
           <div className="space-y-6">

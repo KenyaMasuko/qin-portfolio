@@ -1,5 +1,4 @@
 import type { NextPage } from "next";
-import { MetaHead } from "src/components/Element/Head";
 import { AppMain } from "src/components/Layout/Main";
 import { Main } from "src/components/Layout/Top";
 import { Blog } from "src/types/blog";
@@ -8,11 +7,10 @@ import { getAllPosts } from "src/utils/microCMS";
 const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
   return (
     <>
-      <MetaHead
-        title="Kenya's Portfolio"
-        description="けんやのポートフォリオのためのページです"
-      />
-      <AppMain>
+      <AppMain
+        title="けんやのポートフォリオ | トップ"
+        description="Frontend web developerのけんやです。けんやの実績やTweet、Githubのリポジトリなどがみれるようになっています。"
+      >
         <Main posts={posts} />
       </AppMain>
     </>

@@ -8,7 +8,6 @@ import {
 } from "@mantine/core";
 import type { NextPage } from "next";
 import { useForm } from "@mantine/form";
-import { MetaHead } from "src/components/Element/Head";
 import { HeadingTitle } from "src/components/Element/Title";
 import { AppMain } from "src/components/Layout/Main";
 
@@ -32,8 +31,10 @@ const Contact: NextPage = () => {
 
   return (
     <>
-      <MetaHead title="Contact" description="コンタクトページ" />
-      <AppMain>
+      <AppMain
+        title="けんやのポートフォリオ | コンタクトページ"
+        description="コンタクトページです"
+      >
         <Container size="lg">
           <HeadingTitle>Contact</HeadingTitle>
           <Box>
