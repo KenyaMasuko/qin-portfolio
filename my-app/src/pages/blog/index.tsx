@@ -1,17 +1,16 @@
+import { HeadingTitle } from "@/common/components/ui-elements/Title";
 import { Container } from "@mantine/core";
 import type { GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { ConvertContent } from "src/components/functional/ConvertContent";
-import { ConvertDate } from "src/components/functional/ConvertDate";
-import { HeadingTitle } from "src/components/Element/Title";
-import { AppMain } from "src/components/Layout/Main";
-import { Blog } from "src/types/blog";
-import { getAllPosts } from "src/utils/microCMS";
+import { ConvertContent } from "@/common/components/functional/ConvertContent";
+import { ConvertDate } from "@/common/components/functional/ConvertDate";
+import { AppMain } from "@/common/components/Layout/Main";
+import { Blog } from "@/common/types/blog";
+import { getAllPosts } from "@/common/utils/microCMS";
 
 const Blog: NextPage<{ posts: Blog[] }> = ({ posts }) => {
   const router = useRouter();
-  console.log(posts);
 
   return (
     <>

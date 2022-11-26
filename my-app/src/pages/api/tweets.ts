@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { fetchTweetsAndUser } from "src/utils/twitterClient";
+import { fetchTweetsAndUser } from "@/common/utils/twitterClient";
 
 const getTweets = async (req: NextApiRequest, res: NextApiResponse) => {
   try {

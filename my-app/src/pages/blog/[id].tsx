@@ -1,12 +1,12 @@
+import { HeadingTitle } from "@/common/components/ui-elements/Title";
 import { Container } from "@mantine/core";
 import type { GetStaticPropsContext, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { ConvertContent } from "src/components/functional/ConvertContent";
-import { ConvertDate } from "src/components/functional/ConvertDate";
-import { HeadingTitle } from "src/components/Element/Title";
-import { AppMain } from "src/components/Layout/Main";
-import { Blog } from "src/types/blog";
-import { getAllIds, getPostById } from "src/utils/microCMS";
+import { ConvertContent } from "@/common/components/functional/ConvertContent";
+import { ConvertDate } from "@/common/components/functional/ConvertDate";
+import { AppMain } from "@/common/components/Layout/Main";
+import { Blog } from "@/common/types/blog";
+import { getAllIds, getPostById } from "@/common/utils/microCMS";
 
 const BlogDetail: NextPage<{ post: Omit<Blog, "id"> }> = ({ post }) => {
   const { title, publishedAt, content } = post;

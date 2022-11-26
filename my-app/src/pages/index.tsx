@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
-import { AppMain } from "src/components/Layout/Main";
-import { Main } from "src/components/Layout/Top";
-import { Blog } from "src/types/blog";
-import { getAllPosts } from "src/utils/microCMS";
+import { AppMain } from "@/common/components/Layout/Main";
+import { Main } from "src/feature/Top";
+import { Blog } from "@/common/types/blog";
+import { getAllPosts } from "@/common/utils/microCMS";
 
 const Home: NextPage<{ posts: Blog[] }> = ({ posts }) => {
   return (

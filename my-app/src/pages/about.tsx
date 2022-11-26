@@ -1,7 +1,7 @@
+import { HeadingTitle } from "@/common/components/ui-elements/Title";
 import { Container } from "@mantine/core";
 import type { NextPage } from "next";
-import { HeadingTitle } from "src/components/Element/Title";
-import { AppMain } from "src/components/Layout/Main";
+import { AppMain } from "@/common/components/Layout/Main";
 
 const About: NextPage = () => {
   return (
