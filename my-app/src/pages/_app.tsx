@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { useState } from "react";
+import { FC, useState } from "react";
 import type { AppProps } from "next/app";
 import {
   ColorSchemeProvider,
@@ -11,10 +11,10 @@ import {
 //fontAwesome regularを追加
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { far } from "@fortawesome/free-regular-svg-icons";
-import { SWRConfig } from "swr";
+import { useLocalStorage } from "@mantine/hooks";
 library.add(far);
 
-const MyGlobalStyles: React.FC = () => (
+const MyGlobalStyles: FC = () => (
   <Global
     styles={(theme) => ({
       "*, *::before, *::after": {
@@ -41,23 +41,12 @@ const MyGlobalStyles: React.FC = () => (
   />
 );
 
-// const queryClient = new QueryClient({
-//   defaultOptions: {
-//     queries: {
-//       retry: false,
-//       refetchOnWindowFocus: false,
-//     },
-//   },
-// })
-
-// const fetcher = async (...args) => {
-//   const res = await fetch(...args)
-//   const json = await res.json()
-//   return json
-// }
-
 function MyApp({ Component, pageProps }: AppProps) {
-  const [colorScheme, setColorScheme] = useState<ColorScheme>("light");
+  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
+    key: "mantine-color-scheme",
+    defaultValue: "light",
+    getInitialValueInEffect: true,
+  });
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
 
