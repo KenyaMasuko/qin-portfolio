@@ -1,3 +1,7 @@
 {
-	"cSpell.words": ["mantine"]
+  "cSpell.words": [
+    "mantine"
+  ],
+  "typescript.tsdk": "node_modules/.pnpm/typescript@4.7.4/node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

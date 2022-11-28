@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Burger, Container, Title, useMantineColorScheme } from "@mantine/core";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import {
   HeaderOpenContext,
@@ -27,7 +27,7 @@ export const HeaderLeft = () => {
           title={title}
           className="md:hidden"
         />
-        <Link href="/">
+        <Link href="/" legacyBehavior>
           <a
             className={`no-underline hover:opacity-50 ${
               opened
@@ -48,11 +48,11 @@ export const HeaderLeft = () => {
           }`}
           onClick={() => toggleColorScheme()}
         >
-          {dark ? (
-            <FontAwesomeIcon color="white" icon={["far", "sun"]} />
-          ) : (
-            <FontAwesomeIcon icon={["far", "moon"]} />
-          )}
+          {dark
+            ? // <FontAwesomeIcon color="white" icon={["far", "sun"]} />
+              "dark"
+            : // <FontAwesomeIcon icon={["far", "moon"]} />
+              "light"}
         </button>
       </div>
     </Container>

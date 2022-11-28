@@ -1,6 +1,6 @@
-import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faWifi } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
+// import { faWifi } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Container, Title } from "@mantine/core";
 
 export const KeyVisualSection = () => {
@@ -19,9 +19,9 @@ export const KeyVisualSection = () => {
           </Title>
         </hgroup>
         <div className="space-x-3 mt-11 md:mt-0">
-          <FontAwesomeIcon className="fa-lg" icon={faTwitter} />
+          {/* <FontAwesomeIcon className="fa-lg" icon={faTwitter} />
           <FontAwesomeIcon className="fa-lg" icon={faFacebook} />
-          <FontAwesomeIcon className="fa-lg" icon={faWifi} />
+          <FontAwesomeIcon className="fa-lg" icon={faWifi} /> */}
         </div>
       </Container>
     </section>

@@ -61,6 +61,7 @@ const getGithubRepo = async (
     },
   });
   const rawRepoInfo = await client.request<ApiResponse>(query);
+
   const repoInfo = rawRepoInfo.repositoryOwner.repositories.nodes.map(
     (repo) => ({
       name: repo.name,

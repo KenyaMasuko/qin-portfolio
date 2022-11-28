@@ -1,21 +1,21 @@
 import { LinkButton } from "@/common/components/ui-elements/LinkButton";
 import { HeadingTitle } from "@/common/components/ui-elements/Title";
 import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Center, Progress, Title } from "@mantine/core";
 import { RepositoryResponse } from "src/pages/api/github";
 import { useFetchGithubRepo } from "@/common/hooks/useFetchGithubRepo";
+import useSWR from "swr";
+import { fetcher } from "@/common/utils/fetcher";
 
-export const GithubSection = () => {
-  const { data, error } = useFetchGithubRepo();
-  if (error) return <div>{error.message}</div>;
-  if (!data) return <div>loading...</div>;
+const GithubSection = () => {
+  const { data } = useFetchGithubRepo();
 
   return (
     <section>
       <HeadingTitle>Github</HeadingTitle>
       <div className="space-y-6">
-        {data.map((repo: RepositoryResponse) => (
+        {data?.map((repo: RepositoryResponse) => (
           <article key={repo.name} className="space-y-4">
             <Title order={2} className="text-lg my-0">
               {repo.name}
@@ -26,11 +26,9 @@ export const GithubSection = () => {
             <p className="text-base my-0"></p>
             <div className="text-xs text-gray-400 font-bold space-x-2 flex">
               <div>
-                <FontAwesomeIcon icon={["far", "star"]} />
                 <span>{repo.stars}</span>
               </div>
               <div>
-                <FontAwesomeIcon icon={faCodeFork} />
                 <span>{repo.forks}</span>
               </div>
             </div>
@@ -57,7 +55,6 @@ export const GithubSection = () => {
                   return (
                     <div key={lang.node.name}>
                       <span className="flex items-center text-xs font-bold">
-                        {/* <span className="bg-[#3178C6] w-2 h-2 absolute rounded-full"></span> */}
                         <span
                           className={`bg-[${lang.node.color}] w-2 h-2 absolute rounded-full`}
                         ></span>
@@ -78,3 +75,5 @@ export const GithubSection = () => {
     </section>
   );
 };
+
+export default GithubSection;

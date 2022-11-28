@@ -15,7 +15,7 @@ export const BlogSection: FC<{ posts: BlogType[] }> = ({ posts }) => {
         <div className="space-y-6">
           {posts?.map((post) => (
             <article key={post.id} className="space-y-2">
-              <Link href={`blog/${post.id}`}>
+              <Link href={`blog/${post.id}`} legacyBehavior>
                 <a className="no-underline hover:opacity-50 space-y-3">
                   <h2 className="text-xl my-0">{post.title}</h2>
                   <div className="text-base my-0">

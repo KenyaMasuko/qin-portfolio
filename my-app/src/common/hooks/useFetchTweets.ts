@@ -2,7 +2,11 @@ import { fetcher } from "@/common/utils/fetcher";
 import useSWR from "swr";
 
 export const useFetchTweets = () => {
-  const { data, error } = useSWR("/api/tweets", fetcher);
+  const { data, error } = useSWR(
+    `${process.env.NEXT_PUBLIC_BASE_URL}/api/tweets`,
+    fetcher,
+    { suspense: true }
+  );
 
   return {
     tweets: data?.data,

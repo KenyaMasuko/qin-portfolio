@@ -3,9 +3,9 @@ import Link from "next/link";
 import { FC, ReactNode } from "react";
 
 type ButtonProps = {
-  link: string
-  children?: ReactNode
-}
+  link: string;
+  children?: ReactNode;
+};
 
 export const LinkButton: FC<ButtonProps> = ({
   children = "View All",
@@ -14,7 +14,7 @@ export const LinkButton: FC<ButtonProps> = ({
   return (
     <Link href={link} passHref>
       <MantineButton
-        component="a"
+        component="button"
         radius="xl"
         sx={(theme) => ({
           backgroundColor:

@@ -8,5 +8,6 @@ declare namespace NodeJS {
     readonly TWITTER_USER_ID;
     readonly GITHUB_TOKEN;
     readonly GITHUB_USER_NAME;
+    readonly NEXT_PUBLIC_BASE_URL;
   }
 }

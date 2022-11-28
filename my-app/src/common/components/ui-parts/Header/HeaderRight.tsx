@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Anchor, useMantineColorScheme } from "@mantine/core";
 import Link from "next/link";
 import React, { useContext } from "react";
@@ -49,7 +49,7 @@ export const HeaderRight = () => {
               <Link href={item.href} passHref>
                 <Anchor
                   className="text-2xl md:text-lg"
-                  component="a"
+                  component="button"
                   sx={(theme) => ({
                     fontFamily: "Avenir Next, sans-serif",
                     color: "white",
@@ -80,11 +80,11 @@ export const HeaderRight = () => {
               color={dark ? "yellow" : "blue"}
               onClick={() => toggleColorScheme()}
             >
-              {dark ? (
-                <FontAwesomeIcon color="white" icon={["far", "sun"]} />
-              ) : (
-                <FontAwesomeIcon icon={["far", "moon"]} />
-              )}
+              {dark
+                ? // <FontAwesomeIcon color="white" icon={["far", "sun"]} />
+                  "dark"
+                : // <FontAwesomeIcon icon={["far", "moon"]} />
+                  "light"}
             </button>
           </li>
         </ul>
