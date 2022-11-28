@@ -1,4 +1,3 @@
-import { ErrorWrapper } from "@/common/components/Layout/ErrorWrapper";
 import { Blog as BlogType } from "@/common/types/blog";
 import { Box, Container, Loader, SimpleGrid } from "@mantine/core";
 import dynamic from "next/dynamic";
