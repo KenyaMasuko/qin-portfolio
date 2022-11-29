@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-import { FC, useState } from "react";
+import { FC } from "react";
 import type { AppProps } from "next/app";
 import {
   ColorSchemeProvider,
@@ -7,12 +7,7 @@ import {
   ColorScheme,
   Global,
 } from "@mantine/core";
-
-//fontAwesome regularを追加
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { far } from "@fortawesome/free-regular-svg-icons";
 import { useLocalStorage } from "@mantine/hooks";
-library.add(far);
 
 const MyGlobalStyles: FC = () => (
   <Global

@@ -1,9 +1,9 @@
-import { LinkButton } from "@/common/components/ui-elements/LinkButton";
 import { HeadingTitle } from "@/common/components/ui-elements/Title";
 import { Avatar, Center } from "@mantine/core";
 import { FormatTwitterDate } from "@/common/components/functional/ConvertDate";
 import { useFetchTweets } from "@/common/hooks/useFetchTweets";
 import { TweetData } from "@/common/types/twitter";
+import { OuterLinkButton } from "@/common/components/ui-elements/OuterLinkButton";
 
 export const TwitterSection = () => {
   const {
@@ -47,9 +47,9 @@ export const TwitterSection = () => {
         ))}
       </div>
       <Center className="mt-12">
-        <LinkButton link="https://twitter.com/k_e1sh1n">
+        <OuterLinkButton link="https://twitter.com/k_e1sh1n">
           View on Twitter
-        </LinkButton>
+        </OuterLinkButton>
       </Center>
     </section>
   );

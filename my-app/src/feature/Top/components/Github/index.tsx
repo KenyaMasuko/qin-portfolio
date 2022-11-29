@@ -1,12 +1,9 @@
-import { LinkButton } from "@/common/components/ui-elements/LinkButton";
 import { HeadingTitle } from "@/common/components/ui-elements/Title";
-import { faCodeFork } from "@fortawesome/free-solid-svg-icons";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Center, Progress, Title } from "@mantine/core";
 import { RepositoryResponse } from "src/pages/api/github";
 import { useFetchGithubRepo } from "@/common/hooks/useFetchGithubRepo";
-import useSWR from "swr";
-import { fetcher } from "@/common/utils/fetcher";
+import { ShareIcon, StarIcon } from "@heroicons/react/24/outline";
+import { OuterLinkButton } from "@/common/components/ui-elements/OuterLinkButton";
 
 const GithubSection = () => {
   const { data } = useFetchGithubRepo();
@@ -25,10 +22,12 @@ const GithubSection = () => {
             )}
             <p className="text-base my-0"></p>
             <div className="text-xs text-gray-400 font-bold space-x-2 flex">
-              <div>
+              <div className="flex items-center gap-1">
+                <StarIcon className="w-3" />
                 <span>{repo.stars}</span>
               </div>
-              <div>
+              <div className="flex items-center gap-1">
+                <ShareIcon className="w-3" />
                 <span>{repo.forks}</span>
               </div>
             </div>
@@ -70,7 +69,9 @@ const GithubSection = () => {
         ))}
       </div>
       <Center className="mt-12">
-        <LinkButton link="#">View on Github</LinkButton>
+        <OuterLinkButton link="https://github.com/KenyaMasuko">
+          View on Github
+        </OuterLinkButton>
       </Center>
     </section>
   );

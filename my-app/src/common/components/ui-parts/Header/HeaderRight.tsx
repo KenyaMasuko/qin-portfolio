@@ -1,11 +1,11 @@
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Anchor, useMantineColorScheme } from "@mantine/core";
 import Link from "next/link";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import {
   HeaderOpenContext,
   HeaderOpenToggleContext,
 } from "@/store/HeaderContext";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/outline";
 
 const navItems = [
   {
@@ -73,18 +73,17 @@ export const HeaderRight = () => {
               </Link>
             </li>
           ))}
-          {/* dark mode button */}
           <li className="hidden md:block">
             <button
-              className="bg-transparent border-solid border-gray-300 rounded-lg p-2"
+              className="bg-transparent border-solid border-gray-300 rounded-lg p-2 grid place-content-center"
               color={dark ? "yellow" : "blue"}
               onClick={() => toggleColorScheme()}
             >
-              {dark
-                ? // <FontAwesomeIcon color="white" icon={["far", "sun"]} />
-                  "dark"
-                : // <FontAwesomeIcon icon={["far", "moon"]} />
-                  "light"}
+              {dark ? (
+                <SunIcon className="text-white w-6" />
+              ) : (
+                <MoonIcon className="text-black w-6" />
+              )}
             </button>
           </li>
         </ul>
