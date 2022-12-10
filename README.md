@@ -6,6 +6,8 @@
 - Typescript
 - Mantine
 - Tailwind css
+- GraphQL
+- SWR
 - Volta
 - pnpm
 
